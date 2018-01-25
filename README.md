@@ -13,6 +13,17 @@ Then open open up your `styles.css` and add this line (for easy customization, d
 @import "./node_modules/ng-alert/style.css";
 ```
 
+Update your `app.module.ts` **imports** array  
+```typescript
+import { NgAlertModule } from '@theo4u/ng-alert';
+...
+imports: [
+    BrowserModule,
+    NgAlertModule,
+    ....
+  ]
+```
+
 ## Demo
 [HERE](https://theo4u.github.io/ngAlert)
 
