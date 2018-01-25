@@ -12,7 +12,7 @@ Then open open up your `styles.css` and add this line (for easy customization, d
 ```
 
 ## Demo
-[HERE](https://theo4u.github.io/ng-alert)
+[HERE](https://theo4u.github.io/ngAlert)
 
 ## Usage
 ```
