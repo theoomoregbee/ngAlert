@@ -11,6 +11,9 @@ Then open open up your `styles.css` and add this line (for easy customization, d
 @import "./node_modules/ng-alert/style.css";
 ```
 
+## Demo
+https://theo4u.github.io/ng-alert
+
 ## Usage
 ```
 <ng-alert [(message)]="message" [dismissable]="true"  [closeType]="closeTypes.TIMES"></ng-alert>
@@ -44,10 +47,14 @@ You can decide to make use of the `NgAlertService` to push new messages, useful 
 From any location withing your app, just push the new messages with `NgAlertService.push(IMessage);` after adding it to your constructor.
 
 ## Example 
-Check [Example](/example) directory
+Check [app.component.ts](./src/app/app.component.ts)
 
 ## Contribution
 Check [CONTRIBUTING.md](CONTRIBUTING.md)
+Makes use of 
+* [ng-packagr](https://github.com/dherges/ng-packagr) for packaging 👍 
+* [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) for pushing to gh-page 👍, check `deploy script` [package.json](package.json)
+
 
 ## Further help
 
