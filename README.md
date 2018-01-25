@@ -10,7 +10,7 @@ npm install --save @theo4u/ng-alert
 ```
 Then open open up your `styles.css` and add this line (for easy customization, don't forget to send a PR for nice UIs, so other peeps can use it :winks:)
 ```
-@import "./node_modules/@theo4u/ng-alert/style.css";
+@import "../node_modules/@theo4u/ng-alert/style.css";
 ```
 
 Update your `app.module.ts` **imports** array  
