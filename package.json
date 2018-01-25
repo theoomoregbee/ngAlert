@@ -1,6 +1,6 @@
 {
   "name": "ng-alert",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Compile and package a TypeScript library to Angular Package Format",
   "keywords": [
     "angular",
@@ -12,7 +12,7 @@
     "alert-components",
     "alert-library",
     "typescript",
-    "css", 
+    "css",
     "html"
   ],
   "author": "Theophilus Omoregbee <theo4u@ymail.com>",
