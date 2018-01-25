@@ -1,0 +1,1 @@
+export * from './src/app/modules/ng-alert/ng-alert.module'
