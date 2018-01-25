@@ -6,7 +6,7 @@ This is a simple alert component, to help show different level of alerts and eas
 
 ## Installation
 ```sh
-npm install --save ngAlert
+npm install --save ngalert
 ```
 Then open open up your `styles.css` and add this line (for easy customization, don't forget to send a PR for nice UIs, so other peeps can use it :winks:)
 ```

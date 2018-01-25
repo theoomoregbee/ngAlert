@@ -1,5 +1,5 @@
 {
-  "name": "ng-alert",
+  "name": "ngalert",
   "version": "1.0.0",
   "description": "Compile and package a TypeScript library to Angular Package Format",
   "keywords": [
