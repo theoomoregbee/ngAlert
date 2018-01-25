@@ -1,6 +1,6 @@
 {
   "name": "@theo4u/ng-alert",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compile and package a TypeScript library to Angular Package Format",
   "keywords": [
     "angular",
