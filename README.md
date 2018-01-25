@@ -1,4 +1,6 @@
 # NgAlert
+[![npm](https://img.shields.io/npm/v/@theo4u/ng-alert.svg)](https://www.npmjs.com/package/@theo4u/ng-alert)
+[![npm](https://img.shields.io/npm/l/express.svg)]()
 
 This is a simple alert component, to help show different level of alerts and easy configurations on how you want it to act. Oh yea! easy to style to follow your own feel.
 
