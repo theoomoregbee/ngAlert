@@ -59,7 +59,12 @@ You can decide to make use of the `NgAlertService` to push new messages, useful 
 ```
 From any location withing your app, just push the new messages with `NgAlertService.push(IMessage);` after adding it to your constructor.
 
-## Example 
+**NB**: any of the following above can be imported like below
+```typescript
+import { NgAlertService, IMessage, MessageType, CloseType  } from '@theo4u/ng-alert';
+```
+
+## Example Usage
 Check [app.component.ts](./src/app/app.component.ts)
 
 ## Contribution
