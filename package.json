@@ -1,5 +1,5 @@
 {
-  "name": "ngalert",
+  "name": "@theo4u/ngalert",
   "version": "1.0.1",
   "description": "Compile and package a TypeScript library to Angular Package Format",
   "keywords": [
