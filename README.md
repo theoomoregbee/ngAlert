@@ -4,6 +4,11 @@
 
 This is a simple alert component, to help show different level of alerts and easy configurations on how you want it to act. Oh yea! easy to style to follow your own feel.
 
+![Error Message](/img/error.png)
+![Info Message](/img/info.png)
+![Warning Message](/img/warning.png)
+![Success  Message](/img/success.png)
+
 ## Installation
 ```sh
 npm install --save @theo4u/ng-alert
