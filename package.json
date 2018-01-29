@@ -27,7 +27,7 @@
     "ng-serve": "ng serve",
     "start": "npm-run-all -p watch-css ng-serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "echo 'no test'",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "npm run build-css && ng-packagr -p ng-package.json && npm run copy",
