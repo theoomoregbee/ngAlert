@@ -1,7 +1,7 @@
 {
   "name": "@theo4u/ng-alert",
   "version": "0.0.0-development",
-  "description": "Compile and package a TypeScript library to Angular Package Format",
+  "description": "Simple Alert Component, to handle different type of alert --> ERROR, WARNING, SUCCESS, INFO",
   "keywords": [
     "angular",
     "angular2",
