@@ -1,4 +1,5 @@
 # NgAlert
+[![Travis](https://img.shields.io/travis/theo4u/ngAlert.svg)]()
 [![npm](https://img.shields.io/npm/v/@theo4u/ng-alert.svg)](https://www.npmjs.com/package/@theo4u/ng-alert)
 [![npm](https://img.shields.io/npm/l/express.svg)]()
 
