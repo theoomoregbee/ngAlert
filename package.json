@@ -1,6 +1,6 @@
 {
   "name": "@theo4u/ng-alert",
-  "version": "1.1.1",
+  "version": "0.0.0-development",
   "description": "Compile and package a TypeScript library to Angular Package Format",
   "keywords": [
     "angular",
@@ -34,7 +34,9 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm-run-all build-css 'build-css -- --watch --recursive'",
     "copy": "cp ./src/app/modules/ng-alert/style.css ./dist/style.css ",
-    "deploy": "ng build –prod --base-href='/ngAlert/' && cp ./dist/index.html ./dist/404.html && ./node_modules/.bin/angular-cli-ghpages –no-silent"
+    "deploy": "ng build –prod --base-href='/ngAlert/' && cp ./dist/index.html ./dist/404.html && ./node_modules/.bin/angular-cli-ghpages –no-silent",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "private": false,
   "dependencies": {
@@ -75,6 +77,8 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "semantic-release": "^12.4.1",
+    "travis-deploy-once": "^4.3.3"
   }
 }
