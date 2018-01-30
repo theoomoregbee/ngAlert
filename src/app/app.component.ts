@@ -68,6 +68,7 @@ export class AppComponent implements OnInit, OnDestroy {
        label: 'Continue',
        css: 'continue',
        action: () => {
+         alert('something happened');
         console.log('someting about me');
        }
      }

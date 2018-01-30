@@ -3,12 +3,13 @@
 [![npm](https://img.shields.io/npm/v/@theo4u/ng-alert.svg)](https://www.npmjs.com/package/@theo4u/ng-alert)
 [![npm](https://img.shields.io/npm/l/express.svg)]()
 
-This is a simple alert component, to help show different level of alerts and easy configurations on how you want it to act. Oh yea! easy to style to follow your own feel.
+This is a simple alert component, to help show different level of alerts and easy configurations on how you want it to act. Also, supports confirmation alert. Oh yea! easy to style to follow your own feel.
 
 ![Error Message](/img/error.png)
 ![Info Message](/img/info.png)
 ![Warning Message](/img/warning.png)
 ![Success  Message](/img/success.png)
+![Confirm  Message](/img/confirm.png)
 
 ## Installation
 ```sh
@@ -42,7 +43,12 @@ imports: [
         export interface IMessage {
         type: MessageType,
         message: string,
-        title?: string
+        title?: string,
+        buttons?: Array<{
+          label: string,
+          action?: Function,
+          css?: string
+        }>
         } 
   ```
   `type` can be `MessageType.info`, `MessageType.success`, `MessageType.error` or `MessageType.warning`
@@ -69,6 +75,13 @@ From any location withing your app, just push the new messages with `NgAlertServ
 ```typescript
 import { NgAlertService, IMessage, MessageType, CloseType  } from '@theo4u/ng-alert';
 ```
+
+## Confirmation Alert
+It can also serve as a confirmation alert, if `buttons` properties of `IMessage` is passed in, which is an array
+* **label**: the text to show for your button
+* **action**: the action to perform when the button is clicked 
+* **css**: your custom css to pass in, since its just a plain `<button></button>`
+
 
 ## Example Usage
 Check [app.component.ts](./src/app/app.component.ts)
