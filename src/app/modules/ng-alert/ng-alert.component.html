@@ -2,17 +2,17 @@
   <h5 *ngIf="message.title">{{message.title}}</h5>
   <span [innerHTML]="message.message">
   </span>
-   <p align="center" *ngIf="dismissable && closeType===closeTypes.NORMAL">
-    <a (click)="message=null">close</a>
-  </p>
-  <div class="button-group">
-    <button *ngFor="let button of message.buttons" class="{{button.css}}" (click)="button.action?button.action():true">
-      {{button.label}}
-    </button>
-  </div>
+  
+  <button *ngFor="let button of message.buttons" class="{{button.css}}" (click)="button.action?button.action():true">
+    {{button.label}}
+  </button>
 
   <button (click)="message=null" *ngIf="dismissable && closeType===closeTypes.TIMES" type="button" class="close" data-dismiss="alert"
     aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
+  <p align="center" *ngIf="dismissable && closeType===closeTypes.NORMAL">
+    <a (click)="message=null">close</a>
+  </p>
+  
 </div>
