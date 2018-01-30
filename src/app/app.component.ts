@@ -20,12 +20,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.message = {
       message: 'Sample message alert',
       type: MessageType.info
-    }
+    };
     this.message2 = {
       message: 'Sample message alert with title',
       title: 'This is Title',
       type: MessageType.info
-    }
+    };
   }
 
   /**
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._alertSub = this._ngAlert.getSource().subscribe(message => {
       this.message = message;
-    })
+    });
   }
 
   /**
@@ -46,13 +46,32 @@ export class AppComponent implements OnInit, OnDestroy {
 
   /**
    * show message with type, default to info for message type
-   * @param message 
-   * @param type 
+   * @param message
+   * @param type
    */
   showMessage(message: string, type: MessageType = MessageType.info) {
     this._ngAlert.push({
       message: message,
       type: type
+    });
+  }
+
+  showConfirmation(message: string, type: MessageType = MessageType.warning) {
+ this._ngAlert.push({
+      message: message,
+      type: type,
+   buttons: [
+     {
+       label: 'Cancel'
+     },
+     {
+       label: 'Continue',
+       css: 'continue',
+       action: () => {
+        console.log('someting about me');
+       }
+     }
+   ]
     });
   }
 }
