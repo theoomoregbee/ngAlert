@@ -7,10 +7,10 @@
 
 <h2>Message Types</h2>
 <p>
-  <button (click)="showMessage('Sample message from click info', messageTypes.info)">Show Message Info</button>  
-  <button (click)="showMessage('Sample message alert from click warning', messageTypes.warning)">Show Message Warning</button>  
-  <button (click)="showMessage('Sample message alert from click success', messageTypes.success)">Show Message Success</button>  
-  <button (click)="showMessage('Sample message alert from click error', messageTypes.error)">Show Message Error</button>  
+  <button (click)="showMessage('Sample message from click info', messageTypes.info)">Show Message Info</button>
+  <button (click)="showMessage('Sample message alert from click warning', messageTypes.warning)">Show Message Warning</button>
+  <button (click)="showMessage('Sample message alert from click success', messageTypes.success)">Show Message Success</button>
+  <button (click)="showMessage('Sample message alert from click error', messageTypes.error)">Show Message Error</button>
 </p>
 
 <h2>With Title </h2>
@@ -21,10 +21,11 @@
   Just simply place the <code>ng-alert</code> at the top of your page and use the exposed interface.
   <br>
   <button (click)="showMessage('Sample message alert from click')">Show Message</button>
+  <button (click)="showConfirmation('<b>Are you sure!</b> you want to do this')">Show Confirmation</button>
 </p>
 
 <h2>Supports HTML content</h2>
 <p>
-  <button (click)="showMessage('<b>Sample</b> bold <ul> <l1>message</li> <li>alert</li> <li>from click</li>')">Show Message HTML</button>  
+  <button (click)="showMessage('<b>Sample</b> bold <ul> <l1>message</li> <li>alert</li> <li>from click</li>')">Show Message HTML</button>
 </p>
 
