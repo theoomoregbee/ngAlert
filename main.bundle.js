@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<h2>When you have an alert in a tight or small width screens</h2>\n<ng-alert [(message)]=\"message\" [dismissable]=\"true\"></ng-alert>\n\n<h2>When you want the close button to be times</h2>\n<ng-alert [(message)]=\"message\" [dismissable]=\"true\"  [closeType]=\"closeTypes.TIMES\"></ng-alert>\n\n<h2>Message Types</h2>\n<p>\n  <button (click)=\"showMessage('Sample message from click info', messageTypes.info)\">Show Message Info</button>  \n  <button (click)=\"showMessage('Sample message alert from click warning', messageTypes.warning)\">Show Message Warning</button>  \n  <button (click)=\"showMessage('Sample message alert from click success', messageTypes.success)\">Show Message Success</button>  \n  <button (click)=\"showMessage('Sample message alert from click error', messageTypes.error)\">Show Message Error</button>  \n</p>\n\n<h2>With Title </h2>\n<ng-alert [(message)]=\"message2\" [dismissable]=\"true\"  [closeType]=\"closeTypes.TIMES\"></ng-alert>\n\n<h2>App Level Alert --> which means you want all your errors to be at one central location, usually the top of your app</h2>\n<p>\n  Just simply place the <code>ng-alert</code> at the top of your page and use the exposed interface.\n  <br>\n  <button (click)=\"showMessage('Sample message alert from click')\">Show Message</button>\n</p>\n\n<h2>Supports HTML content</h2>\n<p>\n  <button (click)=\"showMessage('<b>Sample</b> bold <ul> <l1>message</li> <li>alert</li> <li>from click</li>')\">Show Message HTML</button>  \n</p>\n\n"
+module.exports = "<div style=\"padding: 20px;\">\n\n\n  <!--The content below is only a placeholder and can be replaced.-->\n  <h2>When you have an alert in a tight or small width screens</h2>\n  <ng-alert [(message)]=\"message\" [dismissable]=\"true\"></ng-alert>\n\n  <h2>When you want the close button to be times</h2>\n  <ng-alert [(message)]=\"message\" [dismissable]=\"true\" [closeType]=\"closeTypes.TIMES\"></ng-alert>\n\n  <h2>Message Types</h2>\n  <p>\n    <button (click)=\"showMessage('Sample message from click info', messageTypes.info)\">Show Message Info</button>\n    <button (click)=\"showMessage('Sample message alert from click warning', messageTypes.warning)\">Show Message Warning</button>\n    <button (click)=\"showMessage('Sample message alert from click success', messageTypes.success)\">Show Message Success</button>\n    <button (click)=\"showMessage('Sample message alert from click error', messageTypes.error)\">Show Message Error</button>\n  </p>\n\n  <h2>With Title </h2>\n  <ng-alert [(message)]=\"message2\" [dismissable]=\"true\" [closeType]=\"closeTypes.TIMES\"></ng-alert>\n\n  <h2>App Level Alert --> which means you want all your errors to be at one central location, usually the top of your app</h2>\n  <p>\n    Just simply place the\n    <code>ng-alert</code> at the top of your page and use the exposed interface.\n    <br>\n    <button (click)=\"showMessage('Sample message alert from click')\">Show Message</button>\n    <button (click)=\"showConfirmation('<b>Are you sure!</b> you want to do this')\">Show Confirmation</button>\n  </p>\n\n  <h2>Supports HTML content</h2>\n  <p>\n    <button (click)=\"showMessage('<b>Sample</b> bold <ul> <l1>message</li> <li>alert</li> <li>from click</li>')\">Show Message HTML</button>\n  </p>\n\n</div>"
 
 /***/ }),
 
@@ -104,6 +104,26 @@ var AppComponent = /** @class */ (function () {
             type: type
         });
     };
+    AppComponent.prototype.showConfirmation = function (message, type) {
+        if (type === void 0) { type = __WEBPACK_IMPORTED_MODULE_1__modules_ng_alert_ng_alert_component__["b" /* MessageType */].warning; }
+        this._ngAlert.push({
+            message: message,
+            type: type,
+            buttons: [
+                {
+                    label: 'Cancel'
+                },
+                {
+                    label: 'Continue',
+                    css: 'continue',
+                    action: function () {
+                        alert('something happened');
+                        console.log('someting about me');
+                    }
+                }
+            ]
+        });
+    };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
@@ -164,7 +184,7 @@ var AppModule = /** @class */ (function () {
 /***/ "../../../../../src/app/modules/ng-alert/ng-alert.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"message\" class=\"alert alert-{{message.type}}\" [ngClass]=\"{padding:closeType===closeTypes.TIMES}\">\n  <h5 *ngIf=\"message.title\">{{message.title}}</h5>\n  <span [innerHTML]=\"message.message\">\n  </span>\n  <p align=\"center\" *ngIf=\"dismissable && closeType===closeTypes.NORMAL\">\n    <a (click)=\"message=null\">close</a>\n  </p>\n  <button (click)=\"message=null\" *ngIf=\"dismissable && closeType===closeTypes.TIMES\" type=\"button\" class=\"close\" data-dismiss=\"alert\"\n    aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>"
+module.exports = "<div *ngIf=\"message\" class=\"alert alert-{{message.type}}\" [ngClass]=\"{padding:closeType===closeTypes.TIMES}\">\n  <h5 *ngIf=\"message.title\">{{message.title}}</h5>\n  <span [innerHTML]=\"message.message\">\n  </span>\n  \n  <button *ngFor=\"let button of message.buttons\" class=\"{{button.css}}\" (click)=\"button.action?button.action():true\">\n    {{button.label}}\n  </button>\n\n  <button (click)=\"message=null\" *ngIf=\"dismissable && closeType===closeTypes.TIMES\" type=\"button\" class=\"close\" data-dismiss=\"alert\"\n    aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n  <p align=\"center\" *ngIf=\"dismissable && closeType===closeTypes.NORMAL\">\n    <a (click)=\"message=null\">close</a>\n  </p>\n  \n</div>"
 
 /***/ }),
 
