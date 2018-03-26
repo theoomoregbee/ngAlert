@@ -1,7 +1,7 @@
 # NgAlert
 [![Travis](https://img.shields.io/travis/theo4u/ngAlert.svg)](https://travis-ci.org/theo4u/ngAlert)
 [![npm](https://img.shields.io/npm/v/@theo4u/ng-alert.svg)](https://www.npmjs.com/package/@theo4u/ng-alert)
-[![npm](https://img.shields.io/npm/l/express.svg)]()
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This is a simple alert component, to help show different level of alerts and easy configurations on how you want it to act. Also, supports confirmation alert. Oh yea! easy to style to follow your own feel.
 
