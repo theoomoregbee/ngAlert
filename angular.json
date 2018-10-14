@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "alert": {
+      "root": "projects/alert",
+      "sourceRoot": "projects/alert/src",
+      "projectType": "library",
+      "prefix": "ng",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/alert/tsconfig.lib.json",
+            "project": "projects/alert/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/alert/src/test.ts",
+            "tsConfig": "projects/alert/tsconfig.spec.json",
+            "karmaConfig": "projects/alert/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/alert/tsconfig.lib.json",
+              "projects/alert/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngAlert"
