@@ -13,7 +13,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:lib": "ng build alert",
-    "test": "ng test",
+    "test": "",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-css": "node-sass-chokidar projects/alert/ -o dist/alert/",
