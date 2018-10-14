@@ -16,7 +16,7 @@ This is a simple alert component, to help show different level of alerts and eas
 npm install --save @theo4u/ng-alert
 ```
 
-For Angular 5 and below 
+For Angular 5 and below use 
 
 ```sh
 npm install --save @theo4u/ng-alert@1.6.0
@@ -96,7 +96,6 @@ Check [app.component.ts](./src/app/app.component.ts)
 ## Contribution
 Check [CONTRIBUTING.md](CONTRIBUTING.md). `npm start` instead of `ng serve` so you easily watch for scss changes while playing with the scss files.
 Makes use of 
-* [ng-packagr](https://github.com/dherges/ng-packagr) for packaging 👍 
 * [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) for pushing to gh-page 👍, check `deploy script` [package.json](package.json)
 
 
