@@ -18,10 +18,10 @@
       "dom"
     ],
     "paths": {
-      "alert": [
+      "ng-alert": [
         "dist/alert"
       ],
-      "alert/*": [
+      "ng-alert/*": [
         "dist/alert/*"
       ]
     }

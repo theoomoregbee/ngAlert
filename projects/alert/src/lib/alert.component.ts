@@ -1,19 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IMessage, CloseType } from './interfaces';
 
 @Component({
   selector: 'ng-alert',
-  template: `
-    <p>
-      alert works!
-    </p>
-  `,
+  templateUrl: 'alert.component.html',
   styles: []
 })
-export class AlertComponent implements OnInit {
+export class NgAlertComponent {
 
-  constructor() { }
+  @Input() dismissable: boolean;
+  rawMessage: IMessage;
+  @Output() messageChange = new EventEmitter();
+  @Input() closeType: CloseType = CloseType.NORMAL;
+  closeTypes = CloseType;
 
-  ngOnInit() {
+  @Input()
+  get message(): IMessage {
+    return this.rawMessage;
   }
+
+  set message(value: IMessage) {
+    this.rawMessage = value;
+    this.messageChange.emit(this.rawMessage);
+  }
+
 
 }

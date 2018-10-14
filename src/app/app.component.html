@@ -1,20 +1,36 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div style="padding: 20px;">
 
+
+  <!--The content below is only a placeholder and can be replaced.-->
+  <h2>When you have an alert in a tight or small width screens</h2>
+  <ng-alert [(message)]="message" [dismissable]="true"></ng-alert>
+
+  <h2>When you want the close button to be times</h2>
+  <ng-alert [(message)]="message" [dismissable]="true" [closeType]="closeTypes.TIMES"></ng-alert>
+
+  <h2>Message Types</h2>
+  <p>
+  <button (click)="showMessage('Sample message from click info', messageTypes.info)">Show Message Info</button>
+  <button (click)="showMessage('Sample message alert from click warning', messageTypes.warning)">Show Message Warning</button>
+  <button (click)="showMessage('Sample message alert from click success', messageTypes.success)">Show Message Success</button>
+  <button (click)="showMessage('Sample message alert from click error', messageTypes.error)">Show Message Error</button>
+  </p>
+
+  <h2>With Title </h2>
+  <ng-alert [(message)]="message2" [dismissable]="true" [closeType]="closeTypes.TIMES"></ng-alert>
+
+  <h2>App Level Alert --> which means you want all your errors to be at one central location, usually the top of your app</h2>
+  <p>
+  Just simply place the
+  <code>ng-alert</code> at the top of your page and use the exposed interface.
+  <br>
+  <button (click)="showMessage('Sample message alert from click')">Show Message</button>
+  <button (click)="showConfirmation('<b>Are you sure!</b> you want to do this')">Show Confirmation</button>
+  </p>
+
+  <h2>Supports HTML content</h2>
+  <p>
+  <button (click)="showMessage('<b>Sample</b> bold <ul> <l1>message</li> <li>alert</li> <li>from click</li>')">Show Message HTML</button>
+  </p>
+
+</div>
