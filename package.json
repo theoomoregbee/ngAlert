@@ -19,7 +19,7 @@
     "build-css": "node-sass-chokidar projects/alert/ -o dist/alert/",
     "copy:readme": "cp ./README.md dist/alert/README.md",
     "copy:img": "cp -r ./img/ dist/alert/img",
-    "packager": "npm run build:lib && npm run build-css && npm run copy:readme && npm run copy:img",
+    "packager": "npm run build:lib && npm run build-css && npm run copy:readme && npm run copy:img && cd dist/alert",
     "deploy": "ng build --prod --base-href='/ngAlert/' && cp ./dist/index.html ./dist/404.html && ./node_modules/.bin/angular-cli-ghpages",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"

@@ -8,7 +8,6 @@ node_js:
   - '8'
 after_success:
   - npm run packager
-  - cd dist/alert
   - ls
   - npm run travis-deploy-once "npm run semantic-release"
 branches:
