@@ -21,13 +21,10 @@
     "copy:img": "cp -r ./img/ dist/alert/img",
     "packager": "npm run build:lib && npm run build-css && npm run copy:readme && npm run copy:img",
     "deploy": "ng build --prod --base-href='/ngAlert/' && cp ./dist/index.html ./dist/404.html && ./node_modules/.bin/angular-cli-ghpages",
-    "prepublishOnly": "npm run packager",
+    "prepublishOnly": "npm run packager && cd dist/alert",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "files": [
-    "dist/alert"
-  ],
   "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.0",
