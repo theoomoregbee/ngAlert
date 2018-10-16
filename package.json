@@ -25,6 +25,9 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "private": false,
+  "release": {
+    "pkgRoot": "dist/alert"
+  },
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
