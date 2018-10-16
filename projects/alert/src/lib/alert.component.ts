@@ -11,7 +11,7 @@ export class NgAlertComponent {
   @Input() dismissable: boolean;
   rawMessage: IMessage;
   @Output() messageChange = new EventEmitter();
-  @Input() closeType: CloseType = CloseType.NORMAL;
+  @Input() closeType: CloseType = CloseType.TIMES;
   closeTypes = CloseType;
 
   @Input()

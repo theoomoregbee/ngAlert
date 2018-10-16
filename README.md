@@ -43,7 +43,7 @@ imports: [
 
 ## Usage
 ```
-<ng-alert [(message)]="message" [dismissable]="true"  [closeType]="closeTypes.TIMES"></ng-alert>
+<ng-alert [(message)]="message" [dismissable]="true"></ng-alert>
 ```
 * **message**: is a two bounded attribute which takes in `IMessage`
   ```typescript
@@ -60,12 +60,18 @@ imports: [
   ```
   `type` can be `MessageType.info`, `MessageType.success`, `MessageType.error` or `MessageType.warning`
 * **dismissable**: is an optional field to allow users to close the alert or not.   `boolean`. Defaults to 
-* **closeType**: is used to determine which type of close button should be place on it, and only accepts `CloseType` enum. Defaults to `CloseType.NORMAL`
+* **closeType**: is used to determine which type of close button should be place on it, and only accepts `CloseType` enum. Defaults to `CloseType.TIMES`
 ```typescript
     export enum CloseType {
     TIMES, NORMAL
     }
+
+// usage
+// NORMAL -> the close button is beneath the alert message
+// TIMES -> the close button is by the far right with x
+<ng-alert [(message)]="message" [dismissable]="true" [closeType]="closeTypes.NORMAL"></ng-alert>
 ```
+
 
 ## App Level Alert 
 You can decide to make use of the `NgAlertService` to push new messages, useful if you want to maintain a central point of alerting your users of anything, like at the top of your page.
